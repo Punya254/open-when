@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open When... With Love from Punya 💙</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      text-align: center;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 2.5rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 220px;
+      margin: 20px;
+      padding: 20px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      padding: 15px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Open When... With Love from Punya 💙</h1>
+  <div class="container">
+    <div class="card" onclick="showMessage(0)">Open when you miss me</div>
+    <div class="card" onclick="showMessage(1)">Open when you feel low</div>
+    <div class="card" onclick="showMessage(2)">Open when you want to laugh</div>
+    <div class="card" onclick="showMessage(3)">Open when you’re stressed</div>
+    <div class="card" onclick="showMessage(4)">Open on a random day</div>
+  </div>
+
+  <div class="message" id="msg"></div>
+
+  <audio autoplay loop controls>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const messages = [
+      `Hey idiot 😤 Missing me already? Just know I’m always there—like your shadow but way cuter 😌 Close your eyes and imagine all our crackhead moments. I miss you too. 💙`,
+      `Bruhh, even the strongest have off days. You're doing great, even if it doesn't feel like it. Take a deep breath, eat something tasty, and text me whenever. I gotchu always 🤝`,
+      `Remember when you fell off the cycle trying to show off? 😂 Or when you said "I’ll study from tomorrow" since 9th grade? You’re my living meme, bro. Never change 😆`,
+      `Exams? Stress? Pfft. You’re the smartest guy I know (when you stop procrastinating). You’ve got this. Go drink water, take a walk, and then dominate. Proud of you 💪`,
+      `Heyy bestie 💙 If today feels boring or weird, just smile knowing someone out here is SO grateful to have you in her life. You’re my fav human. Stay golden 🥹`
+    ];
+
+    function showMessage(index) {
+      const msg = document.getElementById('msg');
+      msg.innerText = messages[index];
+      msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
